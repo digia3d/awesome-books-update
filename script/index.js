@@ -41,3 +41,22 @@ const renderBooks = () => {
 // Initial rendering of books
 renderBooks();
 
+// Handle form submission
+const form = document.getElementById('book-form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const titleInput = document.getElementById('title');
+  const authorInput = document.getElementById('author');
+
+  const title = titleInput.value.trim();
+  const author = authorInput.value.trim();
+
+  if (title && author) {
+    addNewBook(title, author);
+    form.reset(); // Clear the form
+  }
+});
+
+
