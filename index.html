@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Books</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header-->
+
+  <header>
+    <nav>
+      <h1>Awesome Books</h1>
+      <ul>
+        <li><a href="#" id="list-link">List</a></li>
+        <li><a href="#" id="add-link">Add New</a></li>
+        <li><a href="#" id="contact-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+
+  <main>
+    <!-- Books List Section -->
+
+    <section id="book-section">
+      <h2>All awesome books</h2>
+      <div id="" book-list"></div>
+    </section>
+
+    <!-- Add New Book Section -->
+
+    <section id="add-section" style="display: none;">
+      <h2>Add a new book</h2>
+      <form id="book-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <button type="submit">Add Book</button>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact-section" style="display: none;">
+      <h2>Contact Information</h2>
+      <p>You can reach us via:</p>
+      <ul>
+        <li>Email: contact@awesomebooks.com</li>
+        <li>Phone: +381 64 123 456</li>
+        <li>Address: Book Street 42, Belgrade</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+
+  <footer>
+    <p>&copy; 2025 Awesome Books. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="script/index.js"></script>
+
+</body>
+
+</html>
