@@ -1,0 +1,24 @@
+{
+  "name": "awesome-books-update",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digia3d/awesome-books-update.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digia3d/awesome-books-update/issues"
+  },
+  "homepage": "https://github.com/digia3d/awesome-books-update#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  }
+}
