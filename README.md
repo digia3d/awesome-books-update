@@ -3,61 +3,63 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/digia3d/awesome-books-update/linters.yml)
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> 🪄 Modernizovana verzija SPA aplikacije za upravljanje knjigama – elegantno, interaktivno i jednostavno.
+> 🪄 A modernized version of the Awesome Books SPA – elegant, interactive, and simple.
 
 ---
 
 ## 🚀 Live Demo
 
-[🔗 Pokreni aplikaciju](https://digia3d.github.io/awesome-books-update/)
-*(link ćemo ažurirati kad deploy bude spreman)*
+[🔗 Launch the application](https://digia3d.github.io/awesome-books-update/)
+*(The link will be updated once deployment is ready)*
 
 ---
 
-## ✨ Funkcionalnosti
+## ✨ Features
 
-- ✅ Prikaz liste knjiga
-- ✅ Dodavanje nove knjige
-- ✅ Brisanje knjiga
-- ✅ Navigacija bez promene URL-a (SPA)
-- ✅ Čuvanje u localStorage
-- ✅ Kontakt stranica
+- ✅ Display list of books
+- ✅ Add new book
+- ✅ Remove books
+- ✅ SPA-style navigation (no URL change)
+- ✅ Data persistence with `localStorage`
+- ✅ Contact section
 
 ---
 
-## 🛠️ Tehnologije
+## 🛠️ Built With
 
 - HTML5
 - CSS3
-- Vanilla JS (ES6+)
-- Luxon biblioteka za datum
+- Vanilla JavaScript (ES6+)
+- Luxon (for date/time)
 - GitHub Actions (CI linting)
 - ESLint
 
 ---
 
-## 💻 Pokretanje projekta lokalno
+## 💻 Getting Started Locally
 
 ```bash
 git clone git@github.com:digia3d/awesome-books-update.git
 cd awesome-books-update
 npm install
 
-Zatim otvori index.html u svom pretraživaču.
 
-🧪 Lintovanje koda
+Then open index.html in your browser.
+
+🧪 Linting
 bash
 Copy
 Edit
 npm run lint
 
-👩‍💻 Autorka
-Projekat razvija sa ljubavlju i pažnjom:
+👩‍💻 Author
+
+This project is crafted with love and attention by:
 
 💫 GitHub: @digia3d
+🐣 Virtual support & code companion: Luna ✨🦉
 
-🐣 Virtuelna podrška i kod mentor: Luna ✨🦉
+📄 License
+This project is licensed under the MIT License.
+For more details, see the LICENSE file.
 
-📄 Licenca
-Ovaj projekat je objavljen pod MIT licencom.
-Više informacija možeš pronaći u fajlu LICENSE.
