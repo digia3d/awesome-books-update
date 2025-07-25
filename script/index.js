@@ -1,14 +1,4 @@
-import { Book, BookList } from '../modules/Book.js';
-
-const bookList = new BookList();
-
-// Example usage:
-
-const addNewBook = (title, author) => {
-  const newBook = new Book(title, author);
-  bookList.addBook(newBook);
-  renderBooks();
-};
+import { setupAddBookForm, bookList } from '../components/AddNewBookSection.js';
 
 // Function to render the list of books
 
@@ -40,23 +30,8 @@ const renderBooks = () => {
 
 // Initial rendering of books
 renderBooks();
+setupAddBookForm(renderBooks);
 
-// Handle form submission
-const form = document.getElementById('book-form');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const titleInput = document.getElementById('title');
-  const authorInput = document.getElementById('author');
-
-  const title = titleInput.value.trim();
-  const author = authorInput.value.trim();
-
-  if (title && author) {
-    addNewBook(title, author);
-    form.reset(); // Clear the form
-  }
-});
 
 
