@@ -18,9 +18,22 @@ const renderBooks = () => {
 
   bookList.getBooks().forEach((book) => {
     const bookElement = document.createElement('div');
-    bookElement.textContent = `"${book.title}" by ${book.author}`;
-    // Here we can add buttons or links for further actions like delete or edit
+    bookElement.className = 'book-entry';
 
+    const text = document.createElement('p');
+    text.textContent = `"${book.title}" by ${book.author}`;
+
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.className = 'remove-btn';
+
+    removeBtn.addEventListener('click', () => {
+      bookList.removeBook(book.id);
+      renderBooks();
+    });
+
+    bookElement.appendChild(text);
+    bookElement.appendChild(removeBtn);
     listContainer.appendChild(bookElement);
   });
 };
