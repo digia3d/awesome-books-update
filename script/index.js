@@ -1,5 +1,6 @@
 // This script is the entry point for the book management application.
 import { Book, BookList } from '../modules/Book.js';
+import { initNavigation } from '../components/navigation.js';
 
 // Import the renderBooks function from BookListSection
 import { renderBooks } from '../components/BookListSection.js';
@@ -38,6 +39,9 @@ form.addEventListener('submit', (e) => {
     alert('Please fill in both fields.'); // Alert if fields are empty
   }
 });
+
+// Initialize the navigation
+initNavigation();
 
 
 

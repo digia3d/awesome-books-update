@@ -28,6 +28,7 @@ form.addEventListener('submit', (e) => {
   if (title && author) {
     addNewBook(title, author, renderBooks);
     form.reset(); // Clear the form
+    document.getElementById('list-link').click(); // Optionally navigate to the book list section
   }
 });
 }
