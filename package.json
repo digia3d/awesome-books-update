@@ -19,6 +19,6 @@
   "homepage": "https://github.com/digia3d/awesome-books-update#readme",
   "description": "",
   "devDependencies": {
-    "eslint": "^9.31.0"
+    "eslint": "^8.57.1"
   }
 }
