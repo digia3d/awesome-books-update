@@ -15,10 +15,31 @@ const showSection = (sectionToShow) => {
 };
 
 export const initNavigation = () => {
-  listLink.addEventListener('click', () => showSection(bookSection));
-  addLink.addEventListener('click', () => showSection(addSection));
-  contactLink.addEventListener('click', () => showSection(contactSection));
+  listLink.addEventListener('click', () => { showSection(bookSection);
+  setActiveLink('list-link');
+});
+  addLink.addEventListener('click', () => { showSection(addSection)
+    setActiveLink('add-link');
+  });
+  contactLink.addEventListener('click', () => { showSection(contactSection)
+    setActiveLink('contact-link');
+  });
 
   // Show the book section by default
   showSection(bookSection);
+  setActiveLink('list-link');
 }
+
+function setActiveLink(activeId) {
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach((link) => {
+    if (link.id === activeId) {
+      link.classList.add('active-link');
+    } else {
+      link.classList.remove('active-link');
+    }
+  });
+  }
+
+  export { setActiveLink };
