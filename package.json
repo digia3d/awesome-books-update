@@ -20,5 +20,8 @@
   "description": "",
   "devDependencies": {
     "eslint": "^8.57.1"
+  },
+  "dependencies": {
+    "luxon": "^3.7.1"
   }
 }
