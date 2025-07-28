@@ -1,5 +1,8 @@
 // This script is the entry point for the book management application.
 import { Book, BookList } from '../modules/Book.js';
+import { setupContactForm } from '../components/ContactSection.js';
+import { initNavigation } from '../components/navigation.js';
+
 
 // Import the renderBooks function from BookListSection
 import { renderBooks } from '../components/BookListSection.js';
@@ -39,8 +42,8 @@ form.addEventListener('submit', (e) => {
   }
 });
 
+// Setup the contact form functionality
+setupContactForm();
 
-
-
-
-
+// Initialize the navigation functionality
+initNavigation();
