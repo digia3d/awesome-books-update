@@ -2,6 +2,7 @@
 import { Book, BookList } from '../modules/Book.js';
 import { setupContactForm } from '../components/ContactSection.js';
 import { initNavigation } from '../components/navigation.js';
+import createFooter from '../components/footer.js';
 
 
 // Import the renderBooks function from BookListSection
@@ -47,3 +48,6 @@ setupContactForm();
 
 // Initialize the navigation functionality
 initNavigation();
+
+// Create and append the footer to the document
+createFooter();
