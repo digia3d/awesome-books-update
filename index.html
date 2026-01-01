@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Books</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awesome Books</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <!-- Header-->
 
-<body>
-  <!-- Header-->
+    <header>
+      <nav>
+        <h1>Awesome Books</h1>
+        <ul>
+          <li><a href="#" id="list-link">List</a></li>
+          <li><a href="#" id="add-link">Add New</a></li>
+          <li><a href="#" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <nav>
-      <h1>Awesome Books</h1>
-      <ul>
-        <li><a href="#" id="list-link">List</a></li>
-        <li><a href="#" id="add-link">Add New</a></li>
-        <li><a href="#" id="contact-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Main Content -->
 
-  <!-- Main Content -->
+    <main>
+      <!-- Books List Section -->
 
-  <main>
-    <!-- Books List Section -->
+      <section id="book-section">
+        <h2>All awesome books</h2>
+        <div id="book-list"></div>
+      </section>
 
-    <section id="book-section">
-      <h2>All awesome books</h2>
-      <div id="book-list"></div>
-    </section>
+      <!-- Add New Book Section -->
 
-    <!-- Add New Book Section -->
+      <section id="add-section" style="display: none">
+        <h2>Add a new book</h2>
+        <form id="book-form" class="form">
+          <div class="form-row">
+            <input
+              type="text"
+              id="title"
+              class="input"
+              placeholder="Title"
+              required
+            />
+            <input
+              type="text"
+              id="author"
+              class="input"
+              placeholder="Author"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+      </section>
 
-    <section id="add-section">
-      <h2>Add a new book</h2>
-      <form id="book-form">
-        <input type="text" id="title" placeholder="Title" required />
-        <input type="text" id="author" placeholder="Author" required />
-        <button type="submit">Add Book</button>
-      </form>
-    </section>
+      <!-- Contact Section -->
 
-    <!-- Contact Section -->
+      <section id="contact-section" style="display: none">
+        <h2>Contact Information</h2>
+        <p>Do you have any questions or want to get in touch?</p>
+        <p>You can reach us via:</p>
+        <ul>
+          <li>Email: contact@awesomebooks.com</li>
+          <li>Phone: +381 64 123 456</li>
+          <li>Address: Book Street 42, Belgrade</li>
+        </ul>
 
-    <section id="contact-section" style="display: none;">
-      <h2>Contact Information</h2>
-      <p>Do you have any questions or want to get in touch?</p>
-      <p>You can reach us via:</p>
-      <ul>
-        <li>Email: contact@awesomebooks.com</li>
-        <li>Phone: +381 64 123 456</li>
-        <li>Address: Book Street 42, Belgrade</li>
-      </ul>
+        <h3>Send us a message</h3>
+        <form id="contact-form" class="form">
+          <div class="form-col">
+            <input
+              type="text"
+              id="name"
+              class="input"
+              placeholder="Your Name"
+              autocomplete="name"
+            />
+            <input
+              type="email"
+              id="email"
+              class="input"
+              placeholder="Your Email"
+              autocomplete="email"
+            />
+            <textarea
+              id="message"
+              class="textarea"
+              placeholder="Your Message"
+              autocomplete="off"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-      <h3>Send us a message</h3>
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  
-
-  <script type="module" src="script/index.js"></script>
-
-</body>
-
+    <script type="module" src="script/index.js"></script>
+  </body>
 </html>
