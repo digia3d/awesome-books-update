@@ -1,3 +1,4 @@
+import { setupContactForm } from './ContactSection.js';
 const listLink = document.getElementById("list-link");
 const addLink = document.getElementById("add-link");
 const contactLink = document.getElementById("contact-link");
@@ -7,11 +8,23 @@ const addSection = document.getElementById("add-section");
 const contactSection = document.getElementById("contact-section");
 
 const showSection = (sectionToShow) => {
-  bookSection.style.display = "block";
+  // Hide all sections
+  bookSection.style.display = "none";
   addSection.style.display = "none";
   contactSection.style.display = "none";
 
+  // Show the selected section
   sectionToShow.style.display = "block";
+
+  // Add animation for Contact Section
+  if (sectionToShow.id === "contact-section") {
+    sectionToShow.classList.add("visible");
+        setupContactForm();
+    console.log("🌸 Contact section opened, setupContactForm activated!");
+  }
+  else {
+    contactSection.classList.remove("visible");
+  }
 };
 
 export const initNavigation = () => {

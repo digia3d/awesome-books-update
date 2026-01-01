@@ -13,7 +13,7 @@ export const renderBooks = (bookList) => {
 
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Remove';
-    removeBtn.className = 'remove-btn';
+    removeBtn.className = 'btn btn-danger';
 
     removeBtn.addEventListener('click', () => {
       bookList.removeBook(book.id);
