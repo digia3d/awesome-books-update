@@ -283,6 +283,24 @@ h2, h3 {
   50% { background-color: #fdecec; }
 }
 
+.form.highlight {
+  animation: form-highlight 1.5s ease;
+}
+
+@keyframes form-highlight {
+  0% {
+    box-shadow: 0 0 12px #79a34d80;
+  }
+
+  50%{
+    box-shadow: 0 0 20px #69a728b3;
+  }
+
+  100% {
+    box-shadow: 0 0 12px #89d13c80;
+  }
+}
+
 /* Mobile Responsiveness */
 
 @media (width <= 600px) {
