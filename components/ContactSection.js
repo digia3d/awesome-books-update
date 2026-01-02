@@ -2,7 +2,7 @@ const setupContactForm = () => {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
-  // 🛡️ sprečava dodavanje event listenera više puta
+  // 🛡️ prevent adding event listener multiple times
   if (form.dataset.listenerAdded === "true") return;
   form.dataset.listenerAdded = "true";
 
@@ -15,7 +15,7 @@ const setupContactForm = () => {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    // ✅ Ako su sva polja popunjena
+    // ✅ If all fields are filled
     if (name && email && message) {
       const oldMessage = form.querySelector(
         ".success-message, .warning-message"
@@ -29,9 +29,20 @@ const setupContactForm = () => {
       form.appendChild(successMessage);
       form.reset();
 
+      // Remove shake class and error styles after successful submission
+      form.classList.remove("shake");
+      form.style.border = "";
+      form.style.boxShadow = "";
+
+      // Highlight effect on success
+      form.classList.add("highlight");
+      setTimeout(() =>
+        form.classList.remove("highlight")
+      , 5000);
+
       setTimeout(() => successMessage.remove(), 5000);
     }
-    // ⚠️ Ako neko polje fali
+    // ⚠️ If any field is empty
     else {
       const oldMessage = form.querySelector(
         ".success-message, .warning-message"
@@ -44,7 +55,7 @@ const setupContactForm = () => {
         "⚠️ Please fill in all fields before submitting.";
       form.appendChild(warningMessage);
 
-      // 💢 SHAKE — čisto i pouzdano
+      // 💢 Shake - clear and safe
       form.classList.remove("shake");
       requestAnimationFrame(() => {
         form.classList.add("shake");
