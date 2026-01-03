@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #f0f4f8;
+}
+
+#content {
+  flex: 1;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #faf7f2;
@@ -161,11 +179,23 @@ h2, h3 {
 
 /* Contact Form and section */
 
+.contact-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 400px;
+}
+
 .form {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.1rem;
   margin-top: 1.5rem;
 }
 
@@ -200,7 +230,8 @@ h2, h3 {
 }
 
 .form button {
-  align-self: flex-end;
+  align-self: center;
+  margin-top: 0.5rem;
 }
 
 .success-message {
@@ -227,6 +258,10 @@ h2, h3 {
   animation: fadeIn 0.5s ease;
 }
 
+.success-message, .warning-message {
+  max-width: 100%;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -241,11 +276,14 @@ h2, h3 {
 
 #contact-section {
     background: linear-gradient(135deg, #f6fbf3, #e9f7ef);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 8%);
   opacity: 0;
   transition: opacity 0.8s ease;
   overflow: visible; /* ✅ da animacija ne bude "isečena" */
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
 }
 
 #contact-section.visible {
@@ -255,6 +293,7 @@ h2, h3 {
 
 /* Shake animation for invalid form submission */
 #contact-form {
+  flex: 1;
   position: relative;
   will-change: transform, box-shadow;
   max-width: 500px; /* ✅ da forma ne zauzme ceo ekran */
@@ -299,6 +338,42 @@ h2, h3 {
   100% {
     box-shadow: 0 0 12px #89d13c80;
   }
+}
+
+.contact-info,
+#contact-form {
+  background: #f9fbf8;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.footer {
+  margin-top: 4rem;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #e9f7ef, #f6fbf3);
+  border-top: 1px solid #a5c882;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 10px rgb(0 0 0 / 6%);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #2e473b;
+  margin: 0;
+}
+
+.footer-date {
+  font-size: 0.8rem;
+  color: #5f7d6b;
+  margin: 0;
 }
 
 /* Mobile Responsiveness */
