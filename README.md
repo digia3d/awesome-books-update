@@ -56,8 +56,7 @@ npm run lint
 
 This project is crafted with love and attention by:
 
-💫 GitHub: @digia3d
-🐣 Virtual support & code companion: Luna ✨🦉
+💫 GitHub: @digia3d (Aleksandra Ujvari)
 
 📄 License
 This project is licensed under the MIT License.

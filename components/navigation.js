@@ -20,7 +20,6 @@ const showSection = (sectionToShow) => {
   if (sectionToShow.id === "contact-section") {
     sectionToShow.classList.add("visible");
         setupContactForm();
-    console.log("🌸 Contact section opened, setupContactForm activated!");
   }
   else {
     contactSection.classList.remove("visible");
@@ -28,15 +27,18 @@ const showSection = (sectionToShow) => {
 };
 
 export const initNavigation = () => {
-  listLink.addEventListener("click", () => {
+  listLink.addEventListener("click", (e) => {
+    e.preventDefault();
     showSection(bookSection);
     setActiveLink("list-link");
   });
-  addLink.addEventListener("click", () => {
+  addLink.addEventListener("click", (e) => {
+    e.preventDefault();
     showSection(addSection);
     setActiveLink("add-link");
   });
-  contactLink.addEventListener("click", () => {
+  contactLink.addEventListener("click", (e) => {
+    e.preventDefault();
     showSection(contactSection);
     setActiveLink("contact-link");
   });
@@ -50,11 +52,7 @@ function setActiveLink(activeId) {
   const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach((link) => {
-    if (link.id === activeId) {
-      link.classList.add("active-link");
-    } else {
-      link.classList.remove("active-link");
-    }
+    link.classList.toggle("active-link", link.id === activeId);
   });
 }
 
