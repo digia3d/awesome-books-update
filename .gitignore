@@ -1,18 +1,2 @@
-# Node.js dependencies
 node_modules/
-
-# Local environment files
-.env
-
-# Log files
-*.log
-
-# macOS system files
-.DS_Store
-
-# Linux & Windows temp
-*.swp
-Thumbs.db
-
-# Optional cache folders
-.cache/
+.vscode/

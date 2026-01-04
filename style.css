@@ -115,6 +115,10 @@ h2, h3 {
   color: #2E473B;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Book Entries */
 
 .book-entry {
