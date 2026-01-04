@@ -9,8 +9,7 @@
 
 ## 🚀 Live Demo
 
-[🔗 Launch the application](https://digia3d.github.io/awesome-books-update/)
-*(The link will be updated once deployment is ready)*
+[🔗 [Launch the application](https://digia3d.github.io/awesome-books-update/)]
 
 ---
 
